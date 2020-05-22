@@ -1,0 +1,23 @@
+<div class="toolbar">
+  <a href="#" class="button" style="background-color:#f1bb4e">Add New Contact</a>
+   <mat-form-field>
+  
+    <input autofocus matInput #searchName type="text" name="searchText" placeholder="Search by last name"
+      autocomplete="off">
+    <ual-orion-icon matSuffix icon="search_outlined"></ual-orion-icon>
+  </mat-form-field>
+  
+</div>
+<main class="userGallery">
+  <div class="userCard"
+    *ngFor="let userContact of userContactDetails;let userContactSearchIndex = index;trackBy:trackByIdentify">
+    <img [src]="'assets/orion/icons/' + userContact.avatar">
+    <div class="cardRow">
+      <h5><b>{{userContact.firstName}} {{userContact.lastName}}</b></h5>
+      <small>{{userContact.designation}}</small>
+    </div>
+    <p>{{userContact.trivia}}</p>
+    <a href="#" class="button">More Info</a>
+  </div>
+
+</main>

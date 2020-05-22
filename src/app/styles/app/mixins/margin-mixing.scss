@@ -1,0 +1,30 @@
+/*Common classes for margin*/
+$margin-maxsize: 30;
+
+@mixin margin-classes {
+  @for $size from 0 through $margin-maxsize {
+    $margin: $size * 1px;
+
+    .margin-#{$size} {
+      margin: $margin;
+    }
+
+    .margin-left-#{$size} {
+      margin-left: $margin;
+    }
+
+    .margin-right-#{$size} {
+      margin-right: $margin;
+    }
+
+    .margin-top-#{$size} {
+      margin-top: $margin;
+    }
+
+    .margin-bottom-#{$size} {
+      margin-bottom: $margin;
+    }
+  }
+}
+
+@include margin-classes;

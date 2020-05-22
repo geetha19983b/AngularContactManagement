@@ -1,0 +1,48 @@
+<form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+  <div class="full-line spacing-bottom">
+    <div class="ual-mat-form-field spacing">
+      <mat-label>User Id #</mat-label>
+
+      <mat-form-field mat-form-field>
+        <input matInput autofocus aria-label="userId" type="text" #userId
+         (input)="focusNextField($event, 2)"
+          name="userId" class="uppercase" tabindex="1" formControlName="userId" autocomplete="off" />
+
+        <mat-error *ngIf="loginForm.controls.userId.invalid">
+          {{ loginForm.controls.userId.errorMessage }}
+        </mat-error>
+
+        <button type="button" mat-button matSuffix mat-icon-button *ngIf="loginForm.controls.userId.value"
+          aria-label="Clear" (click)="clearValue(loginForm.controls.userId)">
+          <ual-orion-icon icon="close"></ual-orion-icon>
+        </button>
+      </mat-form-field>
+    </div>
+
+    <div class="ual-mat-form-field">
+      <mat-label>Password </mat-label>
+
+      <mat-form-field mat-form-field>
+        <input matInput aria-label="Password " type="password"  name="password" tabindex="2" 
+        class="uppercase" #password
+          (input)="focusNextField($event, 3)" formControlName="password" autocomplete="off" />
+
+        <mat-error *ngIf="loginForm.controls.password.invalid">
+          {{ loginForm.controls.password.errorMessage }}
+        </mat-error>
+
+        <button type="button" mat-button matSuffix mat-icon-button *ngIf="loginForm.controls.password.value"
+          aria-label="Clear" (click)="clearValue(loginForm.controls.password)">
+          <ual-orion-icon icon="close"></ual-orion-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </div>
+  <button type="submit" mat-raised-button tabindex="8" class="log-in-button selectable"
+    [disabled]="!loginForm.valid || submitSearchSpinner">
+    <mat-icon *ngIf="submitSearchSpinner">
+      <mat-spinner diameter="20"></mat-spinner>
+    </mat-icon>
+    <span *ngIf="!submitSearchSpinner">Log In</span>
+  </button>
+</form>

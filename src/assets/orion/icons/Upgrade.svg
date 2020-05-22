@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Upgrade</title>
+    <defs>
+        <path d="M12,24 C5.372583,24 0,18.627417 0,12 C0,5.372583 5.372583,0 12,0 C18.627417,0 24,5.372583 24,12 C24,18.627417 18.627417,24 12,24 Z M13.4071951,9.01933367 L17.5479146,12.4071951 L18.8143902,10.8592805 L12.8752696,6 L11.9391206,6 L6,10.8592805 L7.26647558,12.4071951 L11.4071951,9.01933367 L11.4071951,18 L13.4071951,18 L13.4071951,9.01933367 Z" id="path-1"></path>
+    </defs>
+    <g id="Icons/Alert/Upgrade" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Combined-Shape" xlink:href="#path-1"></use>
+    </g>
+</svg>

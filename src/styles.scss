@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "./app/styles/material/material-custom.scss";
+@import "./app/styles/app/common.scss";
+@import "./app/styles/app/flex.scss";
+@import "./app/styles/vendor/flag-icon-css.scss";
+body {
+  background-color: #e6e4d9;
+  background-image: url('assets/images/pattern.png');
+}
+
+.mat-raised-button {
+  color: #fff;
+  background-color: #2A9FBC;
+}

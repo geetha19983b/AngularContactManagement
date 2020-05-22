@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Group@1x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-/-Badge-/-Million-Miler" transform="translate(-2.000000, 0.000000)">
+            <g id="Group" transform="translate(2.000000, 0.000000)">
+                <polygon id="Fill-1" fill="#41748D" transform="translate(9.930110, 10.000000) scale(1, -1) translate(-9.930110, -10.000000) " points="-2.84217094e-14 -9.58955138e-14 -2.84217094e-14 16.5256216 9.93054945 20 19.8602198 16.5256216 19.8602198 -9.58955138e-14"></polygon>
+                <text id="1M" font-family="HelveticaNeue, Helvetica Neue" font-size="11" font-weight="normal" letter-spacing="-0.2" fill="#FFFFFF">
+                    <tspan x="2" y="15">1M</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

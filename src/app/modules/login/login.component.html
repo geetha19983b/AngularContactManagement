@@ -1,0 +1,12 @@
+<div class="message-container">
+  <div class="message-container-inner">
+    <div class="title">Hello, please log into Application.</div>
+    <div class="title-sub-text">Let's make some people happy today</div>
+  </div>
+</div>
+
+<div class="form-container">
+  <ual-login-form [loginParams]="loginForm" [submitSearchSpinner]="submitSearchSpinner"
+    (submitLoginFormData)="onLoginFormSubmit($event)">
+  </ual-login-form>
+</div>

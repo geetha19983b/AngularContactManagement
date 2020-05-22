@@ -1,0 +1,111 @@
+html,
+body {
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  width: 100%;
+
+  font-size: 16px;
+
+  /* background-image: linear-gradient(to bottom, #133868, #0c2340 calc(35% + 64px)); */
+  /* background-attachment: fixed; */
+}
+
+/** Setup font family before app loads */
+@font-face {
+  font-family: openSansRegular;
+
+  src: url("../../assets/app/fonts/open-sans/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: openSansLight;
+
+  src: url("../../assets/app/fonts/open-sans/OpenSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: openSansSemiBold;
+
+  src: url("../../assets/app/fonts/open-sans/OpenSans-SemiBold.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+
+  font-family: "openSansRegular";
+}
+
+/** Show a spinner while application is loading */
+.module-loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.module-loading .logo {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+}
+
+.module-loading .module-name {
+  margin-top: 5px;
+}
+
+.module-loading .spinner {
+  width: 200px;
+  height: 200px;
+
+  transform-origin: center center;
+
+  animation: rotate 2s linear infinite;
+}
+
+.module-loading .path {
+  animation: dash 1.5s ease-in-out infinite;
+
+  stroke: #ddd;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}

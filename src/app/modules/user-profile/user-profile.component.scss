@@ -1,0 +1,124 @@
+:host {
+  display: flex;
+
+  .user-basic-info-container {
+    display: flex;
+    padding: 5px 0 5px 16px;
+  }
+
+  .user-badge-column {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 18px;
+
+    ual-orion-icon {
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  .user-name-mp-column {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 284px;
+    padding: 0 0 0 0;
+  }
+
+  .user-name-mp-column-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 284px;
+    padding: 0 0 0 12px;
+  }
+
+  .user-name-row {
+    display: flex;
+    flex-direction: row;
+    width: 284px;
+    padding-top: 1px;
+  }
+
+  
+  .user-card-name {
+    align-items: flex-start;
+    min-width: 200px;
+    overflow: hidden;
+
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .user-card-name-badge {
+    align-items: flex-start;
+    min-width: 170px;
+    overflow: hidden;
+
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .user-card-dob {
+    align-items: flex-end;
+    width: 120px;
+    margin: 3px 1px 1px 15px;
+
+    font-weight: bold;
+    font-size: 12px;
+    color: #333;
+    white-space: nowrap;
+  }
+
+  .user-authenticate {
+    cursor: pointer;
+  }
+
+  .show-more-expand-panel >  {
+    ::ng-deep {
+      mat-expansion-panel > mat-expansion-panel-header {
+        z-index: 2 !important;
+      }
+    }
+  }
+
+  ual-expand-panel {
+    ::ng-deep {
+      mat-panel-title {
+        width: 100%;
+      }
+
+      mat-expansion-panel-header {
+        cursor: pointer;
+      }
+
+      .mat-expansion-indicator {
+        margin-right: 16px;
+      }
+    }
+
+    &.sub-expand-panel {
+      ::ng-deep {
+        mat-expansion-panel-header {
+          &:not([aria-disabled=true]) {
+            mat-panel-title {
+              color: #333;
+            }
+          }
+        }
+
+        mat-panel-title {
+          justify-content: flex-start;
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+}

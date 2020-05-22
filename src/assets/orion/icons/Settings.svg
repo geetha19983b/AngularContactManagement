@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Icons/Digital/Settings</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M24,13.776 L20.616,14.604 C20.436,15.18 20.208,15.744 19.932,16.26 L21.732,19.236 L19.224,21.744 L16.248,19.932 C15.732,20.22 15.168,20.448 14.592,20.628 L13.764,24 L10.224,24 L9.396,20.628 C8.82,20.448 8.256,20.22 7.74,19.932 L4.764,21.744 L2.256,19.236 L4.068,16.26 C3.78,15.744 3.552,15.18 3.372,14.604 L0,13.776 L0,10.236 L3.372,9.408 C3.552,8.832 3.78,8.268 4.068,7.752 L2.256,4.776 L4.764,2.268 L7.74,4.08 C8.256,3.792 8.82,3.564 9.396,3.384 L10.224,0 L13.764,0 L14.592,3.384 C15.168,3.564 15.732,3.792 16.248,4.08 L19.224,2.268 L21.732,4.776 L19.932,7.752 C20.208,8.268 20.436,8.832 20.616,9.408 L24,10.236 L24,13.776 Z M16.5,12 C16.5,9.516 14.484,7.5 12,7.5 C9.504,7.5 7.488,9.516 7.488,12 C7.488,14.496 9.504,16.512 12,16.512 C14.484,16.512 16.5,14.496 16.5,12 Z" id="path-1"></path>
+    </defs>
+    <g id="Icons/Digital/Settings" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Atmos/Icons/Digital/settings">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#0C2340" fill-rule="nonzero" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

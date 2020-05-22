@@ -1,0 +1,64 @@
+:host {
+  display: flex;
+  width: 100%;
+
+  ::ng-deep {
+    mat-expansion-panel-header {
+      &:not([aria-disabled=true]) {
+        cursor: inherit;
+
+        mat-panel-title {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          margin-right: 0;
+
+          color: #6244bb;
+
+          cursor: pointer;
+        }
+
+        .mat-expansion-indicator {
+          height: 100% !important;
+
+          cursor: pointer;
+
+          &:after {
+            color: #0c2340;
+          }
+        }
+      }
+    }
+  }
+
+  mat-expansion-panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    outline: none;
+
+    &.inverse-header {
+      flex-direction: column-reverse;
+    }
+
+    &.caret-click {
+      mat-expansion-panel-header {
+        cursor: default;
+      }
+    }
+
+    mat-expansion-panel-header {
+      z-index: 1;
+
+      width: 100%;
+
+      background-color: #fff;
+    }
+
+    mat-panel-description {
+      margin: 0;
+    }
+  }
+}

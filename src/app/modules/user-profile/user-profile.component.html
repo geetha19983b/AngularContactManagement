@@ -1,0 +1,36 @@
+<ual-card [bar]="true" [canExpand]="false" [fabIcons]="fabIcons" [canNotAddFab]="true" [showMenu]="!userCardData">
+  <ng-container *ngIf="userCardData">
+    <div content [ngClass]="'padding-bottom-30'">
+      <div class="user-basic-info-container">
+        <div class="user-badge-column" *ngIf="badgeEligible">
+          <ual-orion-icon [icon]="mpBadge"></ual-orion-icon>
+          <ual-orion-icon [icon]="mmBadge"></ual-orion-icon>
+        </div>
+
+        <div [ngClass]="badgeEligible ? 'user-name-mp-column-badge' : 'user-name-mp-column'">
+
+          <div class="user-name-row">
+            <div [ngClass]="badgeEligible ? 'user-card-name-badge' : 'user-card-name'">
+              {{ userCardData.firstName }} {{ userCardData.lastName }}
+            </div>
+            <div class="user-card-dob">{{ userCardData.birthDate | ualDate}}</div>
+          </div>
+        </div>
+      </div>
+
+      <mat-divider></mat-divider>
+      <ual-expand-panel class="show-more-expand-panel" [expanded]="expanded" [expandedHeight]="'56px'"
+        [collapsedHeight]="'56px'" [hideToggle]="true" [inverseHeader]="true"
+        (expandToggled)="showMoreOrLessToggle($event)">
+        <div title>
+          <span>{{ expandedText }}</span>
+        </div>
+
+        <div class="content-container">
+          
+        </div>
+      </ual-expand-panel>
+
+    </div>
+  </ng-container>
+</ual-card>

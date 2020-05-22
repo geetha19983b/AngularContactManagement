@@ -1,0 +1,29 @@
+/*Common classes for padding*/
+$padding-maxsize: 50;
+
+@mixin padding-classes {
+  @for $size from 0 through $padding-maxsize {
+    $padding: $size * 1px;
+
+    .padding-#{$size} {
+      padding: $padding;
+    }
+
+    .padding-left-#{$size} {
+      padding-left: $padding;
+    }
+
+    .padding-right-#{$size} {
+      padding-right: $padding;
+    }
+
+    .padding-top-#{$size} {
+      padding-top: $padding;
+    }
+
+    .padding-bottom-#{$size} {
+      padding-bottom: $padding;
+    }
+  }
+}
+@include padding-classes;

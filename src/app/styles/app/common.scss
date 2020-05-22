@@ -1,0 +1,163 @@
+/** Handles commmon padding and margin styling */
+@import "./app/styles/app/mixins/padding-mixing.scss";
+@import "./app/styles/app/mixins/margin-mixing.scss";
+
+html,
+body {
+  scroll-behavior: smooth;
+ 
+}
+
+/* Handles any element that a user can interact with */
+.selectable {
+  color: #6244bb;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  &-text {
+    text-decoration: underline;
+  }
+
+  &-background {
+    color: #fff;
+
+    background-color: #6244bb;
+  }
+}
+
+/* Common classes to handle font sizes and font colors */
+.font {
+  &-9 {
+    font-size: 9px;
+  }
+
+  &-12 {
+    font-size: 12px;
+  }
+
+  &-14 {
+    font-size: 14px;
+  }
+
+  &-15 {
+    font-size: 15px;
+  }
+
+  &-20 {
+    font-size: 20px;
+  }
+
+  &-bold {
+    font-weight: bold;
+  }
+
+  &-semi-bold {
+    font-weight: 600;
+  }
+
+  &-large {
+    font-size: large;
+  }
+
+  &-small {
+    font-size: small;
+  }
+
+  &-smaller {
+    font-size: smaller;
+  }
+
+  &-light {
+    opacity: .6;
+  }
+
+  &-dark-blue {
+    color: #182558;
+  }
+
+  &-purple {
+    color: #6244bb;
+  }
+
+  &-black {
+    color: #333;
+  }
+
+  &-black-0 {
+    color: #000;
+  }
+
+  &-brown-grey {
+    color: #949494;
+  }
+
+  &-white {
+    color: #fff;
+  }
+
+  &-underline {
+    text-decoration: underline;
+  }
+}
+
+/** Show children on the same line and take full width of container */
+.full-line {
+  display: flex;
+  flex-direction: row;
+}
+
+.disabled {
+  color: #949494 !important;
+
+  cursor: not-allowed !important;
+}
+
+/*Border colors for valid and invalid input values*/
+.input {
+  &-valid {
+    border: 1px solid #ccc;
+  }
+
+  &-invalid {
+    border: 1px solid #f44336;
+  }
+}
+
+/*Custom class added for tooltip display for flights info*/
+.flights-info-tooltip {
+  display: block;
+  max-width: 100% !important;
+  padding: 8px;
+  overflow: visible;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: #333;
+  letter-spacing: 0;
+  white-space: pre-line;
+
+  border: 1 px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, .25);
+}
+
+/* Custom class added for tooltip display for multi-traveller PNR*/
+.pnr-alert-tooltip {
+  width: 203px;
+  height: 61px;
+
+  font-size: 14px;
+  color: #333;
+}
+
+/*Use this class when overlay has fixed position, but you need to scroll the contents along with page scroll*/
+.overlay-container-scrollable {
+  position: absolute;
+  z-index: 1;
+}
+
+/*Use this class to set the overlay behind header on scroll*/
+.overlay-container-header {
+  z-index: 1;
+}
