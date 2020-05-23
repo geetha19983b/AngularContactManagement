@@ -29,7 +29,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.isAuthenticated = this.authService.checkAuthorization();
-    this.returnUrl = this.route.snapshot.queryParams[AuthConsts.RETURN_URL] || AppPaths.BASIC_SEARCH.ROUTE;
+    this.returnUrl = this.route.snapshot.queryParams[AuthConsts.RETURN_URL] 
+    || AppPaths.USER_CONTACT_LIST.ROUTE;
   }
 
 

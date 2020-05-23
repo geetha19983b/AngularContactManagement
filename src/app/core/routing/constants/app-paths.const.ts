@@ -9,16 +9,15 @@ export class AppPaths {
   };
   // Login Config -- END
 
-  // Search Config -- START
-  static readonly BASIC_SEARCH: AppPath = {
-    NAME: 'Basic Search',
-    PATH: 'basic-search',
-    ROUTE: '/basic-search'
-  };
-
   static readonly USER_CONTACT_LIST: AppPath = {
     NAME: 'User Contact List',
     PATH: 'user-contact-list',
     ROUTE: '/user-contact-list'
+  };
+
+  static readonly CONTACT: AppPath = {
+    NAME: 'Contact',
+    PATH: 'contact/:id',
+    ROUTE: '/contact'
   };
 }

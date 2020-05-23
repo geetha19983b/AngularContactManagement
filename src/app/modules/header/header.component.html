@@ -1,21 +1,4 @@
-<!-- <div class="mat-menu-container">
-  <mat-toolbar  color="primary">
-    <button mat-button [matMenuTriggerFor]="menu">Profile</button>
-   <mat-menu #menu="matMenu" class="mat-menu-header-panel">
-    <button mat-menu-item >
-      <ual-orion-icon icon="plane"></ual-orion-icon>
-      <span>My Data</span>
-    </button>
-
-    <button mat-menu-item>
-      <ual-orion-icon icon="plane"></ual-orion-icon>
-      <span>Search</span>
-    </button>
-  </mat-menu>
-</mat-toolbar>
-</div> -->
-
-<header id="mainheader">
+<!-- <header id="mainheader">
   <nav>
       <ul>
           <li><img src="assets/images/cake.svg" height="55" /></li> 
@@ -25,4 +8,31 @@
           <li><a href="pages/about.html">About</a></li>
       </ul>
   </nav>
-</header>
+</header> -->
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Contact Management</span>
+    <span class="header-spacer"></span>
+    <!-- <mat-icon class="header-icon">favorite</mat-icon> -->
+    <!-- <mat-icon class="header-icon">delete</mat-icon> -->
+    <button mat-button [matMenuTriggerFor]="belowMenu">Contacts</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button mat-menu-item [routerLink]="['/user-contact-list']">All Contacts</button>
+      <button mat-menu-item [routerLink]="['/user2-contact-list']">Item2</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item>Settings</button>
+      <button mat-menu-item>Help</button>
+    </mat-menu>
+
+    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>

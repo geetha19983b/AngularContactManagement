@@ -1,23 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatMenuModule } from '@angular/material/menu';
+import { MaterialModule } from '../common/material.module';
 import { OrionIconModule } from '../common/orion-icon/orion-icon.module';
 import { HeaderComponent } from './header.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     HeaderComponent
   ],
   imports: [
+    MaterialModule,
     CommonModule,
     OrionIconModule,
-    MatMenuModule,
-    MatButtonModule,
-    MatDividerModule,
-    MatToolbarModule
+    RouterModule
   ],
   exports: [HeaderComponent]
 })

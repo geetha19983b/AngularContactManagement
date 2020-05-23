@@ -1,8 +1,11 @@
 :host {
+ 
   .userGallery{
     display: flex;
     flex-direction: row;
-    flex-basis: 60%;
+   //flex-basis: 60%;
+    width:1000px;
+    
     flex-wrap: wrap;
     align-content: flex-start;
     color:black;
@@ -15,7 +18,7 @@
 .userCard{
     display: flex;
     flex-flow: column wrap;
-    flex-basis: 20%;
+    flex-basis: 30%;
     margin: .4rem;
     padding: .5rem;
     background-color: #fff;
@@ -44,7 +47,7 @@
     align-self: center;
 }
 .userCard > p {
-  justify-content: space-around;
+  //justify-content: space-around;
   font-style: italic;
 }
 .cardRow{
@@ -59,43 +62,54 @@
  // flex-shrink: 3;
  align-self: flex-end;
 }
-a.button{
-  display: inline-block;
-  padding: 0.3em 1.2em;
-  // margin: 0 0.3em 0.3em 0;
-  margin:0 0.1em 0.1em 0;
-  border-radius: 2em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: 'Roboto',sans-serif;
-  font-weight: 300;
-  color: #FFFFFF;
-  background-color: #4eb5f1;
-  text-align: center;
-  transition: all 0.2s;
-}
-a.button:hover {
-  background-color:#4095c6;
-  //border-color: rgba(255,255,255,1);
-  }
+// a.button{
+//   display: inline-block;
+//   padding: 0.3em 1.2em;
+//   // margin: 0 0.3em 0.3em 0;
+//   margin:0 0.1em 0.1em 0;
+//   border-radius: 2em;
+//   box-sizing: border-box;
+//   text-decoration: none;
+//   font-family: 'Roboto',sans-serif;
+//   font-weight: 300;
+//   color: #FFFFFF;
+//   background-color: #4eb5f1;
+//   text-align: center;
+//   transition: all 0.2s;
+// }
+// a.button:hover {
+//   background-color:#4095c6;
+//   //border-color: rgba(255,255,255,1);
+//   }
 
 .toolbar{
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.toolbar > a.button {
-  align-self: baseline;
+// .toolbar > a.button {
+//   align-self: baseline;
+// }
+.header-spacer {
+  flex-grow: 1;
 }
 .toolbar > input {
   margin-left: auto;
 }
-::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-  color: #f1bb4e!important;
-  // opacity: 1!important;"
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+//   color: #f1bb4e!important;
+//   background: 2px;
+//   // opacity: 1!important;"
+// }
+// ::ng-deep .mat-form-field-appearance-outline {
+//   //color:  #f14e4e!important;
+//   color:#4ef18f!important;
+// }
+.icon-white {
+   color:white;
 }
-::ng-deep .mat-form-field-appearance-outline {
-  //color:  #f14e4e!important;
-  color:#4ef18f!important;
+ual-orion-icon {
+  color:#28a745!important;
 }
 }

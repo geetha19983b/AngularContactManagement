@@ -20,14 +20,6 @@ const APP_ROUTES: Routes = [
     canActivate: [LoginGuard]
   },
   {
-    path: AppPaths.BASIC_SEARCH.PATH, /** Lazy loaded basic search module */
-    loadChildren: () => import('./modules/basic-search/basic-search.module')
-      .then(m => m.BasicSearchModule),
-    data: {
-      moduleName: AppPaths.BASIC_SEARCH.NAME
-    }
-  },
-  {
     path: AppPaths.USER_CONTACT_LIST.PATH,
     loadChildren: () => import('./modules/user-contact-list/user-contact-list.module')
       .then(m => m.UserContactListModule),

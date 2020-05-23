@@ -9,7 +9,7 @@ export class UserProfileService {
     private requestService: RequestService
   ) { }
 
-  userProfileResults(userProfileRequest: UserProfileRequest) {
+  userProfileDetails(userProfileRequest: UserProfileRequest) {
     return this.requestService.userProfile(userProfileRequest);
   }
 

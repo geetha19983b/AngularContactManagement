@@ -1,36 +1,56 @@
-<ual-card [bar]="true" [canExpand]="false" [fabIcons]="fabIcons" [canNotAddFab]="true" [showMenu]="!userCardData">
-  <ng-container *ngIf="userCardData">
-    <div content [ngClass]="'padding-bottom-30'">
-      <div class="user-basic-info-container">
-        <div class="user-badge-column" *ngIf="badgeEligible">
-          <ual-orion-icon [icon]="mpBadge"></ual-orion-icon>
-          <ual-orion-icon [icon]="mmBadge"></ual-orion-icon>
-        </div>
-
-        <div [ngClass]="badgeEligible ? 'user-name-mp-column-badge' : 'user-name-mp-column'">
-
-          <div class="user-name-row">
-            <div [ngClass]="badgeEligible ? 'user-card-name-badge' : 'user-card-name'">
-              {{ userCardData.firstName }} {{ userCardData.lastName }}
-            </div>
-            <div class="user-card-dob">{{ userCardData.birthDate | ualDate}}</div>
-          </div>
-        </div>
-      </div>
-
-      <mat-divider></mat-divider>
-      <ual-expand-panel class="show-more-expand-panel" [expanded]="expanded" [expandedHeight]="'56px'"
-        [collapsedHeight]="'56px'" [hideToggle]="true" [inverseHeader]="true"
-        (expandToggled)="showMoreOrLessToggle($event)">
-        <div title>
-          <span>{{ expandedText }}</span>
-        </div>
-
-        <div class="content-container">
+<div class="profile" *ngIf="userData">
+  <mat-tab-group color="accent">
+    <mat-tab label="Bio" >
+      <mat-card class="contact-card ">
+        <mat-card-header>
+          <img mat-card-avatar [src]="'assets/orion/icons/' + userData.avatar">
+          <mat-card-title>{{userData.firstName}} {{userData.lastName}}</mat-card-title>
+          <mat-card-subtitle>{{userData.designation}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="'assets/orion/icons/' + userData.avatar" alt="Photo of a Shiba Inu"
+          class="mat-card-image">
+        <mat-card-content>
+          <p>
+           {{userData.bio}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">LIKE</button>
+          <button mat-raised-button color="warn">DELETE</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-tab>
+    <mat-tab label="SocialMediaContact">
+      <div class="tabcontent">
+        <mat-list class="socialIdentity">
+          <mat-list-item class="even">
+            <mat-icon matListIcon>folder</mat-icon>
+            <h3 matLine> message.from </h3>
+            <p matLine>
+              <span> message.subject </span>
+              <span class="demo-2"> -- message.content </span>
+            </p>
+          </mat-list-item>
+          <mat-list-item class="odd">
+            <mat-icon matListIcon>folder</mat-icon>
+            <h3 matLine> message.from </h3>
+            <p matLine>
+              <span> message.subject </span>
+              <span class="demo-2"> -- message.content </span>
+            </p>
+          </mat-list-item>
+        </mat-list>
+     </div>
+    </mat-tab>
+    <mat-tab label="SnailContact">
+      <div class="tabcontent">
+        <div class="addressContainer">
+          <div class="home"><p>home address</p></div>
+          <div class="office"><p>office address</p></div>
+          <div class="home"><p>home address</p></div>       
           
         </div>
-      </ual-expand-panel>
-
-    </div>
-  </ng-container>
-</ual-card>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

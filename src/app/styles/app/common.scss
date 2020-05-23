@@ -124,32 +124,6 @@ body {
   }
 }
 
-/*Custom class added for tooltip display for flights info*/
-.flights-info-tooltip {
-  display: block;
-  max-width: 100% !important;
-  padding: 8px;
-  overflow: visible;
-
-  font-size: 14px;
-  line-height: 18px;
-  color: #333;
-  letter-spacing: 0;
-  white-space: pre-line;
-
-  border: 1 px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, .25);
-}
-
-/* Custom class added for tooltip display for multi-traveller PNR*/
-.pnr-alert-tooltip {
-  width: 203px;
-  height: 61px;
-
-  font-size: 14px;
-  color: #333;
-}
 
 /*Use this class when overlay has fixed position, but you need to scroll the contents along with page scroll*/
 .overlay-container-scrollable {

@@ -37,7 +37,7 @@ export class RequestService {
   }
 
   login(requestObj: LoginRequest, mock = this.mock): Observable<LoginResponse> {
-
+    mock = true;
     return mock ? of(LOGIN_RESULT_MOCK) : this.requestBuilderService.setRequest({
       method: 'POST',
       url: RequestUrls.LOGIN,
@@ -47,15 +47,16 @@ export class RequestService {
 
   userProfile(requestObj: UserProfileRequest, mock = this.mock): Observable<UserProfileResponse> {
 
-    return mock ? of(USER_PROFILE_RESULT_MOCK) : this.requestBuilderService.setRequest({
+    return this.requestBuilderService.setRequest({
       method: 'GET',
-      url: RequestUrls.USERPROFILE
+      url: `${RequestUrls.USERCONTACTLIST}/${requestObj.profileId}` 
     });
   }
 
-  userContactList(requestObj: UserContactListRequest, mock = this.mock): Observable<UserContactListResponse> {
+  userContactList(requestObj: UserContactListRequest, mock = this.mock)
+  : Observable<UserProfileResponse[]> {
 
-    return mock ? of(USER_CONTACT_LIST_RESULT_MOCK) : this.requestBuilderService.setRequest({
+    return this.requestBuilderService.setRequest({
       method: 'GET',
       url: RequestUrls.USERCONTACTLIST
     });

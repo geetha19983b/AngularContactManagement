@@ -1,124 +1,80 @@
 :host {
-  display: flex;
+ display: flex;
 
-  .user-basic-info-container {
-    display: flex;
-    padding: 5px 0 5px 16px;
-  }
-
-  .user-badge-column {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 18px;
-
-    ual-orion-icon {
-      width: 21px;
-      height: 21px;
-    }
-  }
-
-  .user-name-mp-column {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 284px;
-    padding: 0 0 0 0;
-  }
-
-  .user-name-mp-column-badge {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 284px;
-    padding: 0 0 0 12px;
-  }
-
-  .user-name-row {
-    display: flex;
-    flex-direction: row;
-    width: 284px;
-    padding-top: 1px;
-  }
-
-  
-  .user-card-name {
-    align-items: flex-start;
-    min-width: 200px;
-    overflow: hidden;
-
-    font-weight: bold;
-    font-size: 15px;
-    color: #333;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  .user-card-name-badge {
-    align-items: flex-start;
-    min-width: 170px;
-    overflow: hidden;
-
-    font-weight: bold;
-    font-size: 15px;
-    color: #333;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  .user-card-dob {
-    align-items: flex-end;
-    width: 120px;
-    margin: 3px 1px 1px 15px;
-
-    font-weight: bold;
-    font-size: 12px;
-    color: #333;
-    white-space: nowrap;
-  }
-
-  .user-authenticate {
-    cursor: pointer;
-  }
-
-  .show-more-expand-panel >  {
-    ::ng-deep {
-      mat-expansion-panel > mat-expansion-panel-header {
-        z-index: 2 !important;
-      }
-    }
-  }
-
-  ual-expand-panel {
-    ::ng-deep {
-      mat-panel-title {
-        width: 100%;
-      }
-
-      mat-expansion-panel-header {
-        cursor: pointer;
-      }
-
-      .mat-expansion-indicator {
-        margin-right: 16px;
-      }
-    }
-
-    &.sub-expand-panel {
-      ::ng-deep {
-        mat-expansion-panel-header {
-          &:not([aria-disabled=true]) {
-            mat-panel-title {
-              color: #333;
-            }
-          }
-        }
-
-        mat-panel-title {
-          justify-content: flex-start;
-          margin-left: 16px;
-        }
-      }
-    }
-  }
+.profile{
+ max-width: 1000px;
+// background-color: white;
+ align-content: flex-start;
+ margin-top: 0.5rem;
 }
+
+.contact-header-image {
+ // background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.mat-card-image {
+  display: flex;
+  width: 350px;
+  align-self: center;
+  border-radius: 30px;
+}
+.tabcontent{
+  width: 1000px;
+  background-color: white;
+  color:black;
+}
+
+::ng-deep .mat-tab-label-container  {
+  background-color: #fce786!important;
+  color:white;
+}
+
+.mat-list >  .mat-list-item:nth-child(2n+1){
+  background-color: #f4afab;
+  color: black;
+}
+.mat-list >  .mat-list-item:nth-child(2n){
+  background-color: #f4eea9;
+  color:black;
+}
+.addressContainer {
+  background-color: white;
+  display:flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+  width: 100%;
+  height: 200px;
+  margin-top: 0.5rem;
+}
+.addressContainer > .home {
+ display: flex;
+  background-color: #a998d6;
+  min-width: 400px;
+  //width: 400px;
+  //flex-basis: 50%;
+  flex-grow: 1;
+  //margin: 5px;
+  //text-align: center;
+  line-height: 15px;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  
+}
+.addressContainer > .office {
+ display: flex;
+  background-color: #ffbded;
+ // flex-basis: 50%;
+ flex-grow: 1;
+ min-width: 600px;
+ // width:600px;
+ // margin: 5px;
+  //text-align: center;
+  //line-height: 15px;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  
+}
+}
+

@@ -41,7 +41,9 @@ export class RequestBuilderService {
       return environment.apiUrl;
     }
 
-    return `${domainOriginUrl}/api/`;
+    //return `${domainOriginUrl}/api/`;
+    return 'api/';
+    
   }
 
 }

@@ -1,31 +1,27 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatButtonModule} from '@angular/material/button';
-import { UserContactListRoutingModule } from './user-contact-list.routing.module';
-import { UserContactListComponent } from './user-contact-list.component';
-import { OrionIconModule } from '../common/orion-icon/orion-icon.module';
-import { ExpandPanelModule } from '../common/expand-panel/expand-panel.module';
 import { FormatDateModule } from 'src/app/pipes/date/date.module';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule} from '@angular/material/input';
+import { MaterialModule } from '../common/material.module';
+import { OrionIconModule } from '../common/orion-icon/orion-icon.module';
+import { UserContactListComponent } from './user-contact-list.component';
+import { UserContactListRoutingModule } from './user-contact-list.routing.module';
+import { UserProfileComponent } from '../user-profile/user-profile.component';
 /** Component Modules */
 @NgModule({
   declarations: [
-    UserContactListComponent
+    UserContactListComponent,
+    UserProfileComponent
   ],
   providers: [],
   imports: [
+    MaterialModule,
     CommonModule,
     OrionIconModule,
     UserContactListRoutingModule,
-    ExpandPanelModule,
     FormatDateModule,
     FormsModule,
-    MatButtonModule,
-    ReactiveFormsModule,
-    MatIconModule,
-    MatInputModule
+    ReactiveFormsModule
 
   ]
 })

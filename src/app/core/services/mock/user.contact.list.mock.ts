@@ -1,5 +1,5 @@
 export const USER_CONTACT_LIST_RESULT_MOCK =[ {
-  userId:'100',
+  id:100,
   firstName: 'Kurt',
   lastName: 'Vonnegut',
   birthDate: '1970-09-19',
@@ -26,7 +26,7 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
   responseData: ''
 },
 {
-  userId:'101',
+  id:101,
   firstName: 'Sherlock',
   lastName: 'Holmes',
   birthDate: '1960-09-19',
@@ -53,7 +53,7 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
   responseData: ''
 },
 {
-  userId:'102',
+  id:102,
   firstName: 'JK',
   lastName: 'Rowling',
   birthDate: '1970-07-19',
@@ -80,7 +80,7 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
   responseData: ''
 },
 {
-  userId:'103',
+  id:103,
   firstName: 'Malala',
   lastName: 'Yousifuf',
   birthDate: '1990-07-19',
@@ -107,7 +107,7 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
   responseData: ''
 },
 {
-  userId:'104',
+  id:104,
   firstName: 'Scott',
   lastName: 'Hanselman',
   birthDate: '1974-07-19',

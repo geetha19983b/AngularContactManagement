@@ -25,7 +25,7 @@ export class LoginGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean | UrlTree> {
-    this.returnUrl = AppPaths.BASIC_SEARCH.ROUTE;
+    this.returnUrl = AppPaths.USER_CONTACT_LIST.ROUTE;
     if (this.authService.checkAuthorization()) { 
       this.router.navigateByUrl(this.returnUrl);
     }

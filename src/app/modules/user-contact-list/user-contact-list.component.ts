@@ -6,6 +6,7 @@ import { take } from 'rxjs/internal/operators/take';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { DataSource } from '@angular/cdk/collections';
 import { of } from 'rxjs/internal/observable/of';
+import { UserProfileResponse } from 'src/app/core/services/request/interfaces/user-profile/user-profile-response.i';
 
 @Component({
   selector: 'ual-user-contact-list',
@@ -14,8 +15,20 @@ import { of } from 'rxjs/internal/observable/of';
   providers: [UserContactListService]
 })
 export class UserContactListComponent implements OnInit, OnDestroy {
-  userContactDetails: UserContactListResponse = {} as any as UserContactListResponse;
+  userContactDetails: UserProfileResponse[];
+  
+  _contactListFilter = '';
+  get contactListFilter(): string {
+    return this._contactListFilter;
+  }
+  set contactListFilter(value: string) {
+    this._contactListFilter = value;
+    this.filteredContactList = this.contactListFilter ? this.performFilter(this.contactListFilter)
+     : this.userContactDetails;
+  }
 
+  filteredContactList: UserProfileResponse[];
+  
   constructor(private userContactListService: UserContactListService) { }
 
   ngOnDestroy(): void {
@@ -29,7 +42,7 @@ export class UserContactListComponent implements OnInit, OnDestroy {
   trackByIdentify(index, item) {
     return index;
   }
-
+ 
   private loadUserContactDetails() {
     const userContactListRequest: UserContactListRequest = {
       userId: '1234'
@@ -39,10 +52,17 @@ export class UserContactListComponent implements OnInit, OnDestroy {
       .pipe(take(1))
       .subscribe(userResponse => {
         this.userContactDetails = userResponse;
+        this.filteredContactList=this.performFilter(this.contactListFilter);
       }, error => {
-        this.userContactDetails = {} as any as UserContactListResponse;
+        this.userContactDetails = [];
       });
+  }
 
+  private performFilter(filterBy: string): UserProfileResponse[] {
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.userContactDetails.filter((contact: UserProfileResponse) =>
+      contact.firstName.toLocaleLowerCase().indexOf(filterBy) !== -1 ||
+      contact.lastName.toLocaleLowerCase().indexOf(filterBy) != -1);
   }
 }
 
