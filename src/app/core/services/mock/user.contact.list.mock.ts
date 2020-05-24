@@ -9,6 +9,9 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
   designation:'Writer',
   contactInfo: {
     emails:['little@gmail.com','earth@gmail.com'],
+    facebookId:'kurt45',
+    linkedInId:'kurt_link',
+    twitterId:'kvonnegut',
     phoneNumbers :[
       {
         type:'Home',
@@ -17,7 +20,8 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
         comment:'Home phone rechable always'
       }
     ],
-    addressLines:['1567 Epitome Street','PO BOX 54636'],
+    homeAddressLines:['1567 Epitome Street','PO BOX 54636'],
+    officeAddressLines:['1567 CatsCradle Street','PO BOX 54636'],
     countryCode:'001'
 
   },
@@ -36,6 +40,9 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
   avatar:'man.svg',
   contactInfo: {
     emails:['swayer@gmail.com','tom@gmail.com'],
+    facebookId:'sherlock56',
+    linkedInId:'sherlock_link',
+    twitterId:'sholmes',
     phoneNumbers :[
       {
         type:'Home',
@@ -44,7 +51,8 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
         comment:'Home phone rechable during evening'
       }
     ],
-    addressLines:['109 Baker Street','PO BOX 5436'],
+    homeAddressLines:['109 Baker Street','PO BOX 5436'],
+    officeAddressLines:['1567 Watson Street','PO BOX 54636'],
     countryCode:'001'
 
   },
@@ -63,6 +71,9 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
   avatar:'woman.svg',
   contactInfo: {
     emails:['jkswayer@gmail.com','rowlingtom@gmail.com'],
+    facebookId:'rowlinkg67',
+    linkedInId:'rowling_link',
+    twitterId:'rowlingj',
     phoneNumbers :[
       {
         type:'Home',
@@ -71,7 +82,8 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
         comment:'Home phone rechable during evening'
       }
     ],
-    addressLines:['109 Hogwards Street','PO BOX 5436'],
+    homeAddressLines:['109 Hogwards Street','PO BOX 5436'],
+    officeAddressLines:['1567 Harry Street','PO BOX 54636'],
     countryCode:'001'
 
   },
@@ -90,6 +102,9 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
   avatar:'girl.svg',
   contactInfo: {
     emails:['malala@gmail.com'],
+    facebookId:'malal96',
+    linkedInId:'malala_link',
+    twitterId:'myousifuf',
     phoneNumbers :[
       {
         type:'Home',
@@ -98,7 +113,8 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
         comment:'Home phone rechable during evening'
       }
     ],
-    addressLines:['109 Hogwards Street','PO BOX 5436'],
+    homeAddressLines:['109 Mala home Street','PO BOX 5436'],
+    officeAddressLines:['1567 Mala Office Street','PO BOX 54636'],
     countryCode:'001'
 
   },
@@ -117,6 +133,9 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
   avatar:'man_with_mustache.svg',
   contactInfo: {
     emails:['scott@gmail.com','hanselman@gmail.com'],
+    facebookId:'scott93',
+    linkedInId:'scott_link',
+    twitterId:'shanselman',
     phoneNumbers :[
       {
         type:'Home',
@@ -125,7 +144,8 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
         comment:'Home phone rechable during evening'
       }
     ],
-    addressLines:['109 Hogwards Street','PO BOX 5436'],
+    homeAddressLines:['109 hanselman home Street','PO BOX 5436'],
+    officeAddressLines:['1567 scott office Street','PO BOX 54636'],
     countryCode:'001'
 
   },

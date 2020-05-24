@@ -6,22 +6,22 @@ body {
   padding: 0;
 }
 
-html {
-  display: flex;
-  justify-content: center;
-}
+/* html {
+  display: flex; 
+  justify-content: center; 
+} */
 
 body {
   width: 100%;
 
-  font-size: 16px;
+  /* font-size: 16px; */
 
   /* background-image: linear-gradient(to bottom, #133868, #0c2340 calc(35% + 64px)); */
   /* background-attachment: fixed; */
 }
 
 /** Setup font family before app loads */
-@font-face {
+/* @font-face {
   font-family: openSansRegular;
 
   src: url("../../assets/app/fonts/open-sans/OpenSans-Regular.ttf") format("truetype");
@@ -37,14 +37,18 @@ body {
   font-family: openSansSemiBold;
 
   src: url("../../assets/app/fonts/open-sans/OpenSans-SemiBold.ttf") format("truetype");
+} */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+/* * {
+   box-sizing: border-box; 
+
+   font-family: "openSansRegular"; 
+} */
+
+body {
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
 }
-
-* {
-  box-sizing: border-box;
-
-  font-family: "openSansRegular";
-}
-
 /** Show a spinner while application is loading */
 .module-loading {
   display: flex;

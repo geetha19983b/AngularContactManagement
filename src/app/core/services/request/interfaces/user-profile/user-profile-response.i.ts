@@ -16,8 +16,12 @@ export interface UserProfileResponse {
 
 export interface UserContactInfo {
   emails: string[];
+  facebookId:string,
+  linkedInId:string;
+  twitterId:string;
   phoneNumbers: PhoneNumber[];
-  addressLines: string[];
+  homeAddressLines: string[];
+  officeAddressLines: string[];
   countryCode: string;
 }
 

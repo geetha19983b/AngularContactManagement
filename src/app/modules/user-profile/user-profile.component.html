@@ -1,6 +1,6 @@
 <div class="profile" *ngIf="userData">
   <mat-tab-group color="accent">
-    <mat-tab label="Bio" >
+    <mat-tab label="Bio">
       <mat-card class="contact-card ">
         <mat-card-header>
           <img mat-card-avatar [src]="'assets/orion/icons/' + userData.avatar">
@@ -11,44 +11,63 @@
           class="mat-card-image">
         <mat-card-content>
           <p>
-           {{userData.bio}}
+            {{userData.bio}}
           </p>
         </mat-card-content>
         <mat-card-actions>
           <button mat-raised-button color="primary">LIKE</button>
+          <button mat-raised-button color="accent">EDIT</button>
           <button mat-raised-button color="warn">DELETE</button>
         </mat-card-actions>
       </mat-card>
     </mat-tab>
     <mat-tab label="SocialMediaContact">
       <div class="tabcontent">
-        <mat-list class="socialIdentity">
-          <mat-list-item class="even">
-            <mat-icon matListIcon>folder</mat-icon>
-            <h3 matLine> message.from </h3>
-            <p matLine>
-              <span> message.subject </span>
-              <span class="demo-2"> -- message.content </span>
-            </p>
-          </mat-list-item>
-          <mat-list-item class="odd">
-            <mat-icon matListIcon>folder</mat-icon>
-            <h3 matLine> message.from </h3>
-            <p matLine>
-              <span> message.subject </span>
-              <span class="demo-2"> -- message.content </span>
-            </p>
-          </mat-list-item>
-        </mat-list>
-     </div>
+        <div class="socialIdentity">
+          <div class="socialIdentityItem">
+            <img [src]="'assets/orion/icons/GooglePlus.svg'">
+            <div class="emaillist">
+              <p *ngFor="let email of userData.contactInfo.emails">
+                {{email}}</p>
+
+            </div>
+          </div>
+          <div class="socialIdentityItem odd">
+            <img [src]="'assets/orion/icons/Facebook.svg'">
+            <p>{{userData.contactInfo.facebookId}}</p>
+          </div>
+          <div class="socialIdentityItem odd">
+            <img [src]="'assets/orion/icons/Linkedin.svg'">
+            <p>{{userData.contactInfo.linkedInId}}</p>
+          </div>
+          <div class="socialIdentityItem">
+            <img [src]="'assets/orion/icons/Twitter.svg'">
+            <p>{{userData.contactInfo.twitterId}}</p>
+          </div>
+        </div>
+      </div>
     </mat-tab>
     <mat-tab label="SnailContact">
       <div class="tabcontent">
         <div class="addressContainer">
-          <div class="home"><p>home address</p></div>
-          <div class="office"><p>office address</p></div>
-          <div class="home"><p>home address</p></div>       
-          
+          <div class="home">
+            <h4>Home Address</h4>
+            <p>{{userData.contactInfo.homeAddressLines}}</p>
+          </div>
+          <div class="office">
+            <h4>Office Address </h4>
+            <p>{{userData.contactInfo.officeAddressLines}}</p>
+          </div>
+          <div class="phone">
+            <h4>Phone Number</h4>
+            <div *ngFor="let phoneNo of userData.contactInfo.phoneNumbers">
+              <p>{{phoneNo.type}}
+                <span style="font-size:small;"> ({{phoneNo.countryAccessCode}}) - {{phoneNo.number }}
+                </span>
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </mat-tab>

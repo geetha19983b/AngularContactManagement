@@ -1,11 +1,9 @@
 <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
   <div class="full-line spacing-bottom">
     <div class="ual-mat-form-field spacing">
-      <mat-label>User Id #</mat-label>
-
-      <mat-form-field mat-form-field>
-        <input matInput autofocus aria-label="userId" type="text" #userId
-         (input)="focusNextField($event, 2)"
+      <mat-form-field appearance="fill">
+        <mat-label>User Id #</mat-label>
+        <input matInput autofocus aria-label="userId" type="text" #userId (input)="focusNextField($event, 2)"
           name="userId" class="uppercase" tabindex="1" formControlName="userId" autocomplete="off" />
 
         <mat-error *ngIf="loginForm.controls.userId.invalid">
@@ -20,11 +18,9 @@
     </div>
 
     <div class="ual-mat-form-field">
-      <mat-label>Password </mat-label>
-
-      <mat-form-field mat-form-field>
-        <input matInput aria-label="Password " type="password"  name="password" tabindex="2" 
-        class="uppercase" #password
+      <mat-form-field appearance="fill">
+        <mat-label>Password </mat-label>
+        <input matInput aria-label="Password " type="password" name="password" tabindex="2" class="uppercase" #password
           (input)="focusNextField($event, 3)" formControlName="password" autocomplete="off" />
 
         <mat-error *ngIf="loginForm.controls.password.invalid">
@@ -38,7 +34,7 @@
       </mat-form-field>
     </div>
   </div>
-  <button type="submit" mat-raised-button tabindex="8" class="log-in-button selectable"
+  <button type="submit" mat-raised-button color="primary" tabindex="8" class="log-in-button selectable"
     [disabled]="!loginForm.valid || submitSearchSpinner">
     <mat-icon *ngIf="submitSearchSpinner">
       <mat-spinner diameter="20"></mat-spinner>

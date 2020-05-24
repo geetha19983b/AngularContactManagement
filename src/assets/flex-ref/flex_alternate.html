@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    /* APPEARANCE STYLES*/
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+
+.box {
+  font-size: 50px;
+  color: white;
+  padding: 10px;
+  text-align:center;
+  font-family: lato;
+  font-weight: 300;
+  box-sizing: border-box;
+  flex-basis:50%;
+}
+.box:nth-of-type(3n) {
+ flex-basis:100%; 
+}
+.box-1 {
+  background: #e51400; 
+}
+.box-2 {
+  background: #fa6800;
+}
+.box-3 {
+  background: #f0a30a; 
+}
+.box-4 {background: #e3c800; }
+.box-5 {background: #a4c400;}
+.box-6 {background: #60a917;}
+.box-7 {background: #00aba9;}
+.box-8 {background: #1ba1e2;} 
+.box-9 {background: #aa00ff;}
+
+/*  LAYOUT STYLES 3rd will span the full width*/
+.container {
+  display: flex;
+  border: 8px solid black;
+  height: 80vh;
+  flex-wrap:wrap;
+}
+  </style>
+</head>
+<body>
+  <section class="container">
+    <div class="box box-1">1</div>
+    <div class="box box-2">2</div>
+    <div class="box box-3">3</div>
+    <div class="box box-4">4</div> 
+    <div class="box box-5">5</div>
+    <div class="box box-6">6</div>
+    <div class="box box-7">7</div>
+    <div class="box box-8">8</div>
+    <div class="box box-9">9</div>  
+  </section>
+  
+</body>
+</html>
