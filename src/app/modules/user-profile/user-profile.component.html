@@ -7,8 +7,16 @@
           <mat-card-title>{{userData.firstName}} {{userData.lastName}}</mat-card-title>
           <mat-card-subtitle>{{userData.designation}}</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image [src]="'assets/orion/icons/' + userData.avatar" alt="Photo of a Shiba Inu"
-          class="mat-card-image">
+        <div class="card-image-content-container">
+          <img mat-card-image [src]="'assets/orion/icons/' + userData.avatar" alt="Photo of a Shiba Inu"
+            class="mat-card-image">
+          <div class="card-image-content">
+            <p>Birth Date : {{userData.birthDate}}</p>
+            <p>Trivia : {{userData.trivia}}
+              Mauris et sapien euismod, blandit arcu aliquet, aliquam sem. Donec quis aliquam sapien. Aenean ut lorem in justo ultricies tincidunt. Ut lacus massa, pretium sed libero sit amet, ultrices dapibus augue. Aenean sit amet nisi arcu. Sed pharetra facilisis porttitor. Aenean vehicula odio quis aliquet sodales. Sed suscipit scelerisque condimentum. Proin lectus felis, suscipit vel urna convallis, accumsan fringilla massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut quam eget neque blandit fringilla. Donec eu ligula et libero rutrum elementum.
+            </p>
+          </div>
+        </div>
         <mat-card-content>
           <p>
             {{userData.bio}}
@@ -49,22 +57,39 @@
     </mat-tab>
     <mat-tab label="SnailContact">
       <div class="tabcontent">
-        <div class="addressContainer">
-          <div class="home">
-            <h4>Home Address</h4>
-            <p>{{userData.contactInfo.homeAddressLines}}</p>
-          </div>
-          <div class="office">
-            <h4>Office Address </h4>
-            <p>{{userData.contactInfo.officeAddressLines}}</p>
-          </div>
-          <div class="phone">
-            <h4>Phone Number</h4>
-            <div *ngFor="let phoneNo of userData.contactInfo.phoneNumbers">
-              <p>{{phoneNo.type}}
-                <span style="font-size:small;"> ({{phoneNo.countryAccessCode}}) - {{phoneNo.number }}
-                </span>
+        <div class="addressRow">
+          <div class="addressCard">
+            <div class="addressCardHeader">
+              <h1>Home</h1>
+            </div>
+            <div class="addressCardBody">
+              <p>
+                {{userData.contactInfo.homeAddressLines}}
               </p>
+            </div>
+          </div>
+          <div class="addressCard">
+            <div class="addressCardHeader">
+              <h1>Office</h1>
+            </div>
+            <div class="addressCardBody">
+              <p>
+                {{userData.contactInfo.officeAddressLines}}
+              </p>
+
+            </div>
+          </div>
+          <div class="addressCard">
+            <div class="addressCardHeader">
+              <h1>Phone</h1>
+            </div>
+            <div class="addressCardBody">
+              <div *ngFor="let phoneNo of userData.contactInfo.phoneNumbers">
+                <p>{{phoneNo.type}}
+                  <span style="font-size:small;"> ({{phoneNo.countryAccessCode}}) - {{phoneNo.number }}
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
 

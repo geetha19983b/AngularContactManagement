@@ -5,7 +5,7 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
   birthDate: '1970-09-19',
   trivia:'Contemperory writer of the century',
   avatar:'man_old.svg',
-  bio:'Quality matters over quantity! Writing about Angular, React, JavaScript, Java, C#, NodeJS, AWS, MongoDB, and Redis related articles',
+  bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra lacinia enim ac bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at dolor vestibulum, ultrices urna in, cursus justo. Pellentesque congue sagittis sagittis. Suspendisse consectetur molestie lacus, at luctus diam tincidunt at. Duis at neque eu felis ullamcorper elementum at a nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed porta quam id pellentesque ultrices. Ut sed nisi elit. Aliquam at pellentesque mauris. Suspendisse nisl odio, bibendum vestibulum nunc sed, feugiat vehicula est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque cursus nibh sem, at posuere ipsum consequat sit amet. Quisque consequat neque commodo quam vulputate, eget ultricies leo blandit.',
   designation:'Writer',
   contactInfo: {
     emails:['little@gmail.com','earth@gmail.com'],
@@ -35,7 +35,7 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
   lastName: 'Holmes',
   birthDate: '1960-09-19',
   trivia:'Unparallel sleuth of all times',
-  bio:'Quality matters over quantity! Writing about Angular, React, JavaScript, Java, C#, NodeJS, AWS, MongoDB, and Redis related articles',
+  bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra lacinia enim ac bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at dolor vestibulum, ultrices urna in, cursus justo. Pellentesque congue sagittis sagittis. Suspendisse consectetur molestie lacus, at luctus diam tincidunt at. Duis at neque eu felis ullamcorper elementum at a nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed porta quam id pellentesque ultrices. Ut sed nisi elit. Aliquam at pellentesque mauris. Suspendisse nisl odio, bibendum vestibulum nunc sed, feugiat vehicula est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque cursus nibh sem, at posuere ipsum consequat sit amet. Quisque consequat neque commodo quam vulputate, eget ultricies leo blandit.',
   designation:'Detective',
   avatar:'man.svg',
   contactInfo: {
@@ -66,7 +66,7 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
   lastName: 'Rowling',
   birthDate: '1970-07-19',
   trivia:'She made us believe in magic!!',
-  bio:'Quality matters over quantity! Writing about Angular, React, JavaScript, Java, C#, NodeJS, AWS, MongoDB, and Redis related articles',
+  bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra lacinia enim ac bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at dolor vestibulum, ultrices urna in, cursus justo. Pellentesque congue sagittis sagittis. Suspendisse consectetur molestie lacus, at luctus diam tincidunt at. Duis at neque eu felis ullamcorper elementum at a nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed porta quam id pellentesque ultrices. Ut sed nisi elit. Aliquam at pellentesque mauris. Suspendisse nisl odio, bibendum vestibulum nunc sed, feugiat vehicula est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque cursus nibh sem, at posuere ipsum consequat sit amet. Quisque consequat neque commodo quam vulputate, eget ultricies leo blandit.',
   designation:'Writer',
   avatar:'woman.svg',
   contactInfo: {
@@ -97,7 +97,7 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
   lastName: 'Yousifuf',
   birthDate: '1990-07-19',
   trivia:'The girl who defied taliban',
-  bio:'Quality matters over quantity! Writing about Angular, React, JavaScript, Java, C#, NodeJS, AWS, MongoDB, and Redis related articles',
+  bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra lacinia enim ac bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at dolor vestibulum, ultrices urna in, cursus justo. Pellentesque congue sagittis sagittis. Suspendisse consectetur molestie lacus, at luctus diam tincidunt at. Duis at neque eu felis ullamcorper elementum at a nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed porta quam id pellentesque ultrices. Ut sed nisi elit. Aliquam at pellentesque mauris. Suspendisse nisl odio, bibendum vestibulum nunc sed, feugiat vehicula est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque cursus nibh sem, at posuere ipsum consequat sit amet. Quisque consequat neque commodo quam vulputate, eget ultricies leo blandit.',
   designation:'Activist',
   avatar:'girl.svg',
   contactInfo: {
@@ -128,7 +128,7 @@ export const USER_CONTACT_LIST_RESULT_MOCK =[ {
   lastName: 'Hanselman',
   birthDate: '1974-07-19',
   trivia:'I Bow to the sensai of .net',
-  bio:'Quality matters over quantity! Writing about Angular, React, JavaScript, Java, C#, NodeJS, AWS, MongoDB, and Redis related articles',
+  bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra lacinia enim ac bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at dolor vestibulum, ultrices urna in, cursus justo. Pellentesque congue sagittis sagittis. Suspendisse consectetur molestie lacus, at luctus diam tincidunt at. Duis at neque eu felis ullamcorper elementum at a nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed porta quam id pellentesque ultrices. Ut sed nisi elit. Aliquam at pellentesque mauris. Suspendisse nisl odio, bibendum vestibulum nunc sed, feugiat vehicula est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque cursus nibh sem, at posuere ipsum consequat sit amet. Quisque consequat neque commodo quam vulputate, eget ultricies leo blandit.',
   designation:'Programmer',
   avatar:'man_with_mustache.svg',
   contactInfo: {
