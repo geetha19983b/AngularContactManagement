@@ -35,37 +35,37 @@
 // }
 
 
-.Sidebar {
-  //min-height: 100%;
-  min-height: calc(100vh - 30px);
- // position: fixed;
-  background-color: #15191C;
-  width: 90px;
- // top: 0;
-  //left: 0;
- // bottom: 0;
-  overflow-y: auto;
-  z-index: 999;
-  -webkit-transition: left 300ms;
-  -o-transition: left 300ms;
-  transition: left 300ms;
-  }
+// .Sidebar {
+//   //min-height: 100%;
+//   min-height: calc(100vh - 30px);
+//  // position: fixed;
+//   background-color: #15191C;
+//   width: 90px;
+//  // top: 0;
+//   //left: 0;
+//  // bottom: 0;
+//   overflow-y: auto;
+//   z-index: 999;
+//   -webkit-transition: left 300ms;
+//   -o-transition: left 300ms;
+//   transition: left 300ms;
+//   }
 
-.Sidebar-Icon {
-    position: fixed;
-    top: 50%;
-    left: 3%;
-    transform: translate(-50%, -50%);
-    transform: -webkit-translate(-50%, -50%);
-    transform: -moz-translate(-50%, -50%);
-    transform: -ms-translate(-50%, -50%);  
-    text-align:center
-}
+// .Sidebar-Icon {
+//     position: fixed;
+//     top: 50%;
+//     left: 3%;
+//     transform: translate(-50%, -50%);
+//     transform: -webkit-translate(-50%, -50%);
+//     transform: -moz-translate(-50%, -50%);
+//     transform: -ms-translate(-50%, -50%);  
+//     text-align:center
+// }
 
-.Sidebar-Icon .SDIcon {
-    color: #fff;
-  }
-.Sidebar-Icon li {
-  list-style-type: none;
-  padding-bottom: 10px 
-}
+// .Sidebar-Icon .SDIcon {
+//     color: #fff;
+//   }
+// .Sidebar-Icon li {
+//   list-style-type: none;
+//   padding-bottom: 10px 
+// }

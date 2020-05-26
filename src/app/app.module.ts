@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { SideNavComponent } from './modules/sidenav/sidenav.component';
+import { MaterialModule } from './modules/common/material.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SideNavComponent } from './modules/sidenav/sidenav.component';
     BrowserAnimationsModule,
     CoreModule,
     MaterialConfigModule,
+    MaterialModule,
     HttpClientModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.

@@ -1,7 +1,11 @@
 :host {
   display: flex;
 
-   color: #000;
+   color:black;
+
+   .log-in-button{
+     color: white;
+   }
 
   // .ual-mat-form-field {
   //   margin-top: 5px;

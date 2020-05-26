@@ -1,4 +1,4 @@
-import { OnInit, OnDestroy, Component } from '@angular/core';
+import { OnInit, OnDestroy, Component, Output, EventEmitter } from '@angular/core';
 import { Subject } from 'rxjs/internal/Subject';
 
 @Component({
@@ -7,8 +7,9 @@ import { Subject } from 'rxjs/internal/Subject';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
+  @Output() toggleSidenav = new EventEmitter<void>();
   private ngUnsubscribe = new Subject();
-
+  
   constructor(){}
 
   ngOnInit() {}

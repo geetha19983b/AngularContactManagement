@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { fadeInAnimation } from './common/animations/fade.animation';
 import { Subject } from 'rxjs/internal/Subject';
 import { Router, NavigationError, RouteConfigLoadStart, RouterEvent, RouteConfigLoadEnd, NavigationStart, NavigationEnd, NavigationCancel } from '@angular/router';
@@ -6,6 +6,9 @@ import { takeUntil } from 'rxjs/internal/operators/takeUntil';
 import { tap } from 'rxjs/internal/operators/tap';
 import { AuthService } from './core/services/auth/auth.service';
 import { RequestService } from './core/services/request/request.service';
+import { MatSidenav } from '@angular/material/sidenav';
+
+const SMALL_WIDTH_BREAKPOINT = 720;
 
 @Component({
   selector: 'ual-root',
@@ -14,6 +17,7 @@ import { RequestService } from './core/services/request/request.service';
   animations: [fadeInAnimation]
 })
 export class AppComponent implements OnInit, OnDestroy {
+  @ViewChild(MatSidenav,{static:false}) sidenav: MatSidenav;
   title = 'StarterApp';
   showHeader = false;
   firstModuleLoaded = false;
@@ -21,6 +25,9 @@ export class AppComponent implements OnInit, OnDestroy {
   moduleLoadingIndicator = false;
   pathsToLoad = [];
   modulesToLoad = [];
+
+  private mediaMatcher: MediaQueryList =
+    matchMedia(`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`);
 
   private ngUnsubscribe = new Subject();
   
@@ -35,6 +42,10 @@ export class AppComponent implements OnInit, OnDestroy {
     this.watchForLazyModuleLoads();
     this.watchForPageResolve();
     this.handleAuthorized();
+    // this.router.events.subscribe(() => {
+    //   if (this.isScreenSmall())
+    //     this.sidenav.close();
+    // })
   }
 
   ngOnDestroy() {
@@ -47,6 +58,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
   pathTrackBy(index: number, pathName: string) {
     return `path-${pathName}`;
+  }
+
+  isScreenSmall(): boolean {
+    return this.mediaMatcher.matches;
   }
 
   /**
@@ -123,5 +138,5 @@ export class AppComponent implements OnInit, OnDestroy {
       });
   }
 
-  
+ 
 }
