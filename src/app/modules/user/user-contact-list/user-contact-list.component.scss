@@ -7,7 +7,7 @@
     width: 1000px;
     flex-wrap: wrap;
     align-content: flex-start;
-    color: black;
+    color: white;
   }
 
   .userGallery > .userCard:nth-child(1) {
@@ -20,7 +20,7 @@
     flex-basis: 30%;
     margin: 0.4rem;
     padding: 0.5rem;
-    background-color: #fff;
+    background-color: #535463;
     // box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
     // flex-grow: 2;
     border-radius: 25px;

@@ -6,7 +6,7 @@
     color: white;
   }
   .profile {
-    width: 80vw;
+    width: 70vw;
     //max-width: 1000px;
     //max-width: 1200px;
    //  background-color: grey;
@@ -28,8 +28,15 @@
   .tabcontent {
     //width: 1000px;
     width: 100%;
-    background-color: white;
-    color: black;
+    background-color: #535463;
+    color: white;
+  }
+  .contact-card {
+    background-color: #535463;
+    color: white;
+  }
+  .subtitle{
+    color:white;
   }
    .card-image-content-container{
      display: flex;
@@ -45,13 +52,15 @@
    }
   ::ng-deep .mat-tab-label-container {
     background-color: #fce786 !important;
+    font-size: 1rem;
     color: white;
   }
 
   .socialIdentity {
     width: 100%;
     padding-top: 10px;
-    background-color: white;
+   // background-color: white;
+   background-color: #535463;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -63,7 +72,7 @@
     //color: #fafafa;
     font-weight: bold;
    // background-color: #c8e6c9;
-   border-top: 5px solid #c8e6c9;
+   border-top: 5px solid #ff6859;
     font-size: 20px;
     justify-content: center;
     align-items: center;
@@ -75,7 +84,7 @@
   .socialIdentity > .odd {
     // flex-grow: 1;
     //background-color: #f4eea9;
-    border-top: 5px solid #f4eea9;
+    border-top: 5px solid #ffcf44;
   }
   .socialIdentityItem > img {
     height: 40px;
@@ -103,8 +112,14 @@
 
   .addressCard {
     width: 40%;
-    background: #fff;
-    border: 1px solid #ccc;
+    //background: #fff;
+    background-color: #535463;
+    border: 1px solid #74848d;
+    border-right: 5px solid #ff6859;
+    //border-top: 2px solid #72defe;
+    border-left:5px solid #ffcf44;
+    //border-bottom: px solid #72deff;
+
     margin-bottom: 50px;
     transition: 0.3s;
   }
@@ -113,12 +128,8 @@
     text-align: center;
     padding: 5px 2px;
     //background: linear-gradient(to right, #ff416c, #ff4b2b);
-    background: #2193b0;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-
-    color: #fff;
+    background:#7e748d;
+    color: white;
   }
 
   .addressCardBody {
@@ -129,7 +140,8 @@
 
   .addressCard:hover {
     //transform: scale(1.05);
-    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+    //box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2)
   }
 
 }

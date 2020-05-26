@@ -21,7 +21,7 @@ const APP_ROUTES: Routes = [
   },
   {
     path: AppPaths.USER_CONTACT_LIST.PATH,
-    loadChildren: () => import('./modules/user-contact-list/user-contact-list.module')
+    loadChildren: () => import('./modules/user/user-contact-list/user-contact-list.module')
       .then(m => m.UserContactListModule),
     data: {
       moduleName: AppPaths.USER_CONTACT_LIST.NAME

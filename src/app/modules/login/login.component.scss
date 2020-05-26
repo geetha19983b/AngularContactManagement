@@ -3,33 +3,32 @@
   display: flex;
   width: 100%;
   height: 100%;
-  
+
   .message-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-     width: 30%;
-     // padding-top: 100px;
+    justify-content: center;
+    width: 30%;
+    // padding-top: 100px;
 
-   // background-color: #0c2340;
-   background-color:  #2A9FBC;
+    // background-color: #0c2340;
+    background-color: #79748d;
 
-    &-inner {
+    .message-container-inner {
       max-width: 345px;
     }
 
     .title {
-      margin-top: 40px;
+    //  margin-top: 40px;
 
       font-weight: bold;
       font-size: 42px;
       line-height: 50px;
-
-      &-sub-text {
-        margin-top: 40px;
-
-        font-size: 18px;
-      }
+    }
+    .title-sub-text {
+     // margin-top: 40px;
+      font-size: 18px;
     }
   }
 
@@ -37,8 +36,8 @@
     display: flex;
     justify-content: center;
     align-content: center;
-     width: 70%;
-      padding-top: 145px;
+    width: 70%;
+    padding-top: 145px;
 
     background-color: #fff;
   }

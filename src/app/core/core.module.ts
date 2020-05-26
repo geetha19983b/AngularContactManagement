@@ -14,7 +14,8 @@ import { OrionIconModule } from '../modules/common/orion-icon/orion-icon.module'
   ],
   exports: [
     HttpClientModule,
-    HeaderComponent
+    HeaderComponent,
+    OrionIconModule
   ]
 })
 export class CoreModule {

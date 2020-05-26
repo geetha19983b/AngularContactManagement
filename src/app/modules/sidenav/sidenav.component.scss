@@ -1,0 +1,71 @@
+// :host {  
+//     .toolbox-styling {
+//       position: fixed;
+//       display: flex;
+//       top: 0;
+//       z-index: 5;
+//       width: 146px;
+//       height: 100%;
+//       right: -115px;
+//       background-color: #555163;
+//       right: -115px;
+//     }
+//     .toolbox-toggle {
+//       position: relative;
+//       top:50%;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       width: 26px;
+//       height: 64px;
+//       background-color: #727c8d;
+       
+//       border-radius: 6px 0 0 6px ;
+//     }
+//     .toolbox-body {
+//       width: 120px;
+//       padding-top: 64px ;
+//       padding-right: 16px;
+//       padding-left: 16px;
+//       background-color:#81728D
+//     }
+//     .toolbox-styling .display-toolbox {
+//       right:0;
+//     }
+// }
+
+
+.Sidebar {
+  //min-height: 100%;
+  min-height: calc(100vh - 30px);
+ // position: fixed;
+  background-color: #15191C;
+  width: 90px;
+ // top: 0;
+  //left: 0;
+ // bottom: 0;
+  overflow-y: auto;
+  z-index: 999;
+  -webkit-transition: left 300ms;
+  -o-transition: left 300ms;
+  transition: left 300ms;
+  }
+
+.Sidebar-Icon {
+    position: fixed;
+    top: 50%;
+    left: 3%;
+    transform: translate(-50%, -50%);
+    transform: -webkit-translate(-50%, -50%);
+    transform: -moz-translate(-50%, -50%);
+    transform: -ms-translate(-50%, -50%);  
+    text-align:center
+}
+
+.Sidebar-Icon .SDIcon {
+    color: #fff;
+  }
+.Sidebar-Icon li {
+  list-style-type: none;
+  padding-bottom: 10px 
+}

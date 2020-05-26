@@ -9,11 +9,13 @@ import { MaterialConfigModule } from './modules/material/material-config.module'
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { SideNavComponent } from './modules/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,

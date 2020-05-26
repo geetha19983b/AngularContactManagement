@@ -5,7 +5,7 @@
         <mat-card-header>
           <img mat-card-avatar [src]="'assets/orion/icons/' + userData.avatar">
           <mat-card-title>{{userData.firstName}} {{userData.lastName}}</mat-card-title>
-          <mat-card-subtitle>{{userData.designation}}</mat-card-subtitle>
+          <mat-card-subtitle class="subtitle">{{userData.designation}}</mat-card-subtitle>
         </mat-card-header>
         <div class="card-image-content-container">
           <img mat-card-image [src]="'assets/orion/icons/' + userData.avatar" alt="Photo of a Shiba Inu"
@@ -25,7 +25,7 @@
         <mat-card-actions>
           <button mat-raised-button color="primary">LIKE</button>
           <button mat-raised-button color="accent">EDIT</button>
-          <button mat-raised-button color="warn">DELETE</button>
+          <button mat-raised-button style="background-color: #ffcf44;">DELETE</button>
         </mat-card-actions>
       </mat-card>
     </mat-tab>

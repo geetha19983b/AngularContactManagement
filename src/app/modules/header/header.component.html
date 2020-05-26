@@ -10,25 +10,25 @@
   </nav>
 </header> -->
 
-<mat-toolbar color="primary">
+<mat-toolbar class="mainheader">
   <mat-toolbar-row>
     <span>Contact Management</span>
     <span class="header-spacer"></span>
     <!-- <mat-icon class="header-icon">favorite</mat-icon> -->
     <!-- <mat-icon class="header-icon">delete</mat-icon> -->
-    <button mat-button [matMenuTriggerFor]="belowMenu">Contacts</button>
+    <button mat-button [matMenuTriggerFor]="belowMenu" class="subMenu">Contacts</button>
     <mat-menu #belowMenu="matMenu" yPosition="below">
-      <button mat-menu-item [routerLink]="['/user-contact-list']">All Contacts</button>
-      <button mat-menu-item [routerLink]="['/user2-contact-list']">Item2</button>
+      <button mat-menu-item [routerLink]="['/user-contact-list']" class="subMenu">All Contacts</button>
+      <button mat-menu-item [routerLink]="['/user2-contact-list']" class="subMenu">Item2</button>
     </mat-menu>
-    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <button mat-button [matMenuTriggerFor]="menu" class="subMenu">Menu</button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
+      <button mat-menu-item class="subMenu">Item 1</button>
+      <button mat-menu-item class="subMenu">Item 2</button>
     </mat-menu>
     <mat-menu #appMenu="matMenu">
-      <button mat-menu-item>Settings</button>
-      <button mat-menu-item>Help</button>
+      <button mat-menu-item class="subMenu">Settings</button>
+      <button mat-menu-item class="subMenu">Help</button>
     </mat-menu>
 
     <button mat-icon-button [matMenuTriggerFor]="appMenu">

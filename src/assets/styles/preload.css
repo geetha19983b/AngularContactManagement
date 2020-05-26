@@ -44,7 +44,9 @@ body {
 
    font-family: "openSansRegular"; 
 } */
-
+* {
+  box-sizing: border-box; 
+}
 body {
   margin:0;
   font-family: 'Montserrat', sans-serif;
@@ -66,8 +68,8 @@ body {
   justify-content: center;
   align-items: center;
 
-  /* color: #fff;  */
-  color:#4095c6;
+   color: #fff; 
+  
 }
 
 .module-loading .module-name {

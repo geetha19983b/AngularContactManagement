@@ -25,6 +25,7 @@
 </ual-header>
 
 <div class="content-container" [ngClass]="{ 'header-open': showHeader }">
+  <!-- <ual-sidenav *ngIf="firstModuleLoaded && showHeader"> </ual-sidenav>  -->
   <div class="route-container" [@fadeInAnimation]="outlet.isActivated ? outlet.activatedRoute : ''">
     <router-outlet #outlet="outlet"></router-outlet>
   </div>
