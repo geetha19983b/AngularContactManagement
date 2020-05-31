@@ -53,4 +53,33 @@ nav>ul>li a {
 .header-spacer {
   flex: 1 1 auto;
 }
+::ng-deep .mat-menu-panel{
+  background: #79748d;
+  background-color: #535463!important;
+}
+.profile-menu{
+  background-color: #535463;
+}
+.mat-menu-content:not(:empty) {
+  padding-top: 0px;
+}
+.profile-menu {
+  min-width: 250px;
+  padding:0;
+  line-height: 1.4;
+}
+.pro-header {
+  background:#4680ff;
+  padding: 15px;
+
+}
+.pro-body {
+  padding:20px 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.icon-white {
+  color: white;
+ 
+}
  }

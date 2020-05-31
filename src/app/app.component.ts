@@ -7,6 +7,8 @@ import { tap } from 'rxjs/internal/operators/tap';
 import { AuthService } from './core/services/auth/auth.service';
 import { RequestService } from './core/services/request/request.service';
 import { MatSidenav } from '@angular/material/sidenav';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 const SMALL_WIDTH_BREAKPOINT = 720;
 
@@ -33,7 +35,9 @@ export class AppComponent implements OnInit, OnDestroy {
   
   constructor(private router: Router,
     private authService: AuthService,
-    private requestService: RequestService) {
+    private requestService: RequestService,
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer) {
     
   }
 
@@ -46,6 +50,10 @@ export class AppComponent implements OnInit, OnDestroy {
     //   if (this.isScreenSmall())
     //     this.sidenav.close();
     // })
+    // this.matIconRegistry.addSvgIcon(
+    //   "Close",
+    //   this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/orion/icons/Close.svg")
+    // );
   }
 
   ngOnDestroy() {

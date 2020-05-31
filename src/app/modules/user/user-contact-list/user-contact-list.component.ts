@@ -7,6 +7,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { DataSource } from '@angular/cdk/collections';
 import { of } from 'rxjs/internal/observable/of';
 import { UserProfileResponse } from 'src/app/core/services/request/interfaces/user-profile/user-profile-response.i';
+import { SnackbarService } from 'src/app/core/services/snackbar/snackbar.service';
 
 @Component({
   selector: 'ual-user-contact-list',
@@ -16,6 +17,7 @@ import { UserProfileResponse } from 'src/app/core/services/request/interfaces/us
 })
 export class UserContactListComponent implements OnInit, OnDestroy {
   userContactDetails: UserProfileResponse[];
+  selectedItem:string;
   
   _contactListFilter = '';
   get contactListFilter(): string {
@@ -28,21 +30,51 @@ export class UserContactListComponent implements OnInit, OnDestroy {
   }
 
   filteredContactList: UserProfileResponse[];
-  
-  constructor(private userContactListService: UserContactListService) { }
+  SelectionStatusOfContacts: any = {};   
+  constructor(private userContactListService: UserContactListService,
+    private snackbarService: SnackbarService,) { }
 
   ngOnDestroy(): void {
   }
 
   ngOnInit() {
     this.loadUserContactDetails();
-
+    this.displayNotification('Welcome Back');
+    this.displayNotification('Hope you enjoy this demo');
   }
   
+  displayNotification(message:string) {
+    this.snackbarService.queueSnackBar({
+      data: {
+        type: 'success',
+        hasIcon: true,
+        iconName: 'Check_circle',
+        message: message,
+        hasSuccessIcon: true,
+       // hasAction: true,
+        //actionName: 'Close'
+      },
+      horizontalPosition: 'start',
+      panelClass: 'snack-bar-full-width'
+    });
+  }
+
   trackByIdentify(index, item) {
     return index;
   }
- 
+  
+  filterContacts(value) {
+    this.selectedItem = value;
+    console.log(value);
+  }
+
+  sendNotification() {  
+    Object.keys(this.SelectionStatusOfContacts).forEach((item, index) => {
+        if (this.SelectionStatusOfContacts[item])
+            console.log(item);
+    });
+  }
+
   private loadUserContactDetails() {
     const userContactListRequest: UserContactListRequest = {
       userId: '1234'

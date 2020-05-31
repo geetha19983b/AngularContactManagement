@@ -1,0 +1,60 @@
+<div class="user-form-container mat-elevation-z4" *ngIf="userData">
+  <mat-toolbar color="primary">
+    <span>Modify Contact</span>
+    <span class="fill-remaining-space"></span>
+  </mat-toolbar>
+
+  <form [formGroup]="contactForm" (ngSubmit)="submitContactForm($event)">
+    <div class="controls-container">
+      <mat-form-field appearance="outline" color="primary">
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="First name" name="FirstName" formControlName="firstName">
+        <mat-error *ngIf="contactForm.controls.firstName.invalid">
+          {{ contactForm.controls.firstName.errorMessage }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" color="primary">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Last name" name="LastName" formControlName="lastName">
+        <mat-error *ngIf="contactForm.controls.lastName.invalid">
+          {{ contactForm.controls.lastName.errorMessage }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" color="primary">
+        <mat-label>Trivia</mat-label>
+        <textarea matInput placeholder="Trivia" name="trivia" formControlName="trivia"></textarea>
+        <mat-error *ngIf="contactForm.controls.trivia.invalid">
+          {{ contactForm.controls.trivia.errorMessage }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" color="primary">
+        <mat-label>Bio</mat-label>
+        <textarea matInput placeholder="bio" name="bio" formControlName="bio"></textarea>
+        <mat-error *ngIf="contactForm.controls.bio.invalid">
+          {{ contactForm.controls.bio.errorMessage }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" color="primary">
+        <mat-label>BirthDate</mat-label>
+        <input matInput placeholder="birthDate" name="birthDate" formControlName="birthDate"
+          [matDatepicker]="birthDatePicker">
+        <mat-datepicker-toggle matSuffix [for]="birthDatePicker"></mat-datepicker-toggle>
+        <mat-datepicker #birthDatePicker></mat-datepicker>
+        <mat-error *ngIf="contactForm.controls.birthDate.invalid">
+          {{ contactForm.controls.birthDate.errorMessage }}
+        </mat-error>
+      </mat-form-field>
+     
+    </div>
+    
+    <div class="button-row">
+      <button mat-raised-button color="primary" type="submit" [disabled]="!contactForm.valid">Submit</button>
+      <button mat-raised-button color="warn">Clear</button>
+    </div>
+  </form>
+
+</div>

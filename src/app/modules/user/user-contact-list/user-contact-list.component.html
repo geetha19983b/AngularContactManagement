@@ -3,24 +3,52 @@
     <mat-icon matTooltip="Add new contact" class="icon-white">add</mat-icon>
   </button>
   <span class="header-spacer"></span>
-  <mat-form-field appearance="fill">
-    <input matInput type="search" placeholder="search here by name" class="search-input" [(ngModel)]="contactListFilter">
+  <div class="search-wrapper">
+    <!-- <mat-form-field class="full-width-input " appearance="outline">
+    <input matInput type="search" placeholder="search here by name" [(ngModel)]="contactListFilter">
     <mat-icon matPrefix>search</mat-icon>
-  </mat-form-field>
-
-</div>
-<div class="userGallery">
-  <div class="userCard"
-    *ngFor="let userContact of filteredContactList;let userContactSearchIndex = index;trackBy:trackByIdentify">
-    <img [src]="'assets/orion/icons/' + userContact.avatar">
-    <div class="cardRow">
-      <h5><b>{{userContact.firstName}} {{userContact.lastName}}</b></h5>
-      <small>{{userContact.designation}}</small>
-    </div>
-    <p>{{userContact.trivia}}</p>
-    <button mat-fab color="accent" [routerLink]="['/user-contact-list/contact', userContact.id]">
-      <mat-icon class="icon-white">info</mat-icon>
-    </button>
+  </mat-form-field> -->
+    <mat-icon class="search-icon" matPrefix>search</mat-icon>
+    <input type="text" placeholder="Search for a contact" [(ngModel)]="contactListFilter">
   </div>
 
 </div>
+<section class="main">
+  <aside class="side-search-bar">
+    <ul>
+      <a href="javascript:void(0);" (click)="filterContacts('All Contacts')">
+        <li [ngClass]="{'active': selectedItem == 'All Contacts'}">All Contacts</li>
+      </a>
+      <a href="javascript:void(0);" (click)="filterContacts('Favorite')">
+        <li [ngClass]="{'active': selectedItem == 'Favorite'}">Favorite</li>
+      </a>
+      <a href="javascript:void(0);" (click)="filterContacts('Recent')">
+        <li [ngClass]="{'active': selectedItem == 'Recent'}">Recent</li>
+      </a>
+      <a href="javascript:void(0);" (click)="filterContacts('Frequent')">
+        <li [ngClass]="{'active': selectedItem == 'Frequent'}">Frequent</li>
+      </a>
+    </ul>
+    <mat-divider></mat-divider>
+    <button mat-raised-button color="warn" class="notification" (click)="sendNotification()">Send Notification</button>
+  </aside>
+  <div class="userGallery">
+    <div class="userCard"
+      *ngFor="let userContact of filteredContactList;let userContactSearchIndex = index;trackBy:trackByIdentify">
+       
+       <img [src]="'assets/orion/icons/' + userContact.avatar">
+       <!-- <input type="checkbox" name="check" value={{userContact.id}}> -->
+       <mat-checkbox class="check" [(ngModel)]="SelectionStatusOfContacts[userContact.id]"
+       [value]="userContact.id"></mat-checkbox>  
+      <div class="cardRow">
+        <h5><b>{{userContact.firstName}} {{userContact.lastName}}</b></h5>
+        <small>{{userContact.designation}}</small>
+      </div>
+      <p>{{userContact.trivia}}</p>
+      <button mat-fab color="warn" [routerLink]="['/user-contact-list/contact', userContact.id]">
+        <mat-icon class="icon-white">info</mat-icon>
+      </button>
+    </div>
+
+  </div>
+</section>

@@ -1,10 +1,56 @@
 :host {
   //width: 100%;
   //justify-content: center;
+  .main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .side-search-bar{
+    //flex-basis: 15%;
+    width: 200px;
+    color: white;
+
+  }
+
+  .side-search-bar ul{
+    padding-inline-start: 0;
+    margin-right: 0;
+}
+
+.side-search-bar ul>a>li{
+  background-color:#ce93d8;
+  border-radius: 0 20px 20px 0;
+    color: #fff;
+    list-style: none;
+    padding: 14px 25px;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+.side-search-bar ul>a>li:hover{
+    background-color: #535463;
+}
+
+.active {
+  background-color: #26a69a !important;
+  color : #ffffff !important;
+}
+.side-search-bar ul>a{
+    text-decoration: none;
+    color: #fff;
+}
+.notification{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: white;
+}
   .userGallery {
     display: flex;
     flex-direction: row;
     width: 1000px;
+   // flex-basis: 85%;
     flex-wrap: wrap;
     align-content: flex-start;
     color: white;
@@ -30,7 +76,7 @@
     //width: 40%;
   }
   .userCard > img {
-    vertical-align: middle;
+   // vertical-align: middle;
     width: 120px;
     //height: 50px;
     border-radius: 50%;
@@ -46,6 +92,17 @@
   .userCard > img {
     align-self: center;
   }
+  .userCard > input {
+   // justify-content: flex-end;
+    //align-self: flex-end
+    position: absolute;
+  }
+  .check {
+    position: absolute;
+  }
+  ::ng-deep.mat-checkbox-background {
+   // background-color: greenyellow;
+ }
   .userCard > p {
     font-style: italic;
   }
@@ -83,7 +140,10 @@
     margin-top: 0.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+   // justify-content: space-between;
+    //background-color:#ce93d8;
+    padding: 15px;
+    border-radius: 0 20px 20px 0;
   }
   // .toolbar > a.button {
   //   align-self: baseline;
@@ -93,6 +153,50 @@
   }
   .toolbar > input {
     margin-left: auto;
+    
+  }
+  .search-wrapper{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  }
+  // .search-icon {
+  //   background-repeat: no-repeat;
+  //   display: inline-block;
+  //   fill: currentColor;
+  //   height: 24px;
+  //   width: 24px;
+  //   font-weight: 400!important;
+  //   line-height: 1
+  // }
+  .search-icon {
+    color:green;
+    background-repeat: no-repeat;
+     display: inline-block;
+  //   fill: currentColor;
+      height: 24px;
+     width: 24px;
+     font-weight: 400!important;
+     line-height: 1;
+     padding-top: 15px;
+     padding-left: 2px;
+  }
+  .search-wrapper input {
+    width: 100%;
+    height: 48px;
+    min-height: 48px;
+    max-height: 48px;
+    padding: 0 16px;
+    border: none;
+    outline: none
+  }
+  .full-width-input{
+    width: 100%;
   }
   // ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
   //   color: #f1bb4e!important;
@@ -105,6 +209,7 @@
   // }
   .icon-white {
     color: white;
+   
   }
   ual-orion-icon {
     color: #28a745 !important;

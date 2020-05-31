@@ -13,7 +13,12 @@
           <div class="card-image-content">
             <p>Birth Date : {{userData.birthDate}}</p>
             <p>Trivia : {{userData.trivia}}
-              Mauris et sapien euismod, blandit arcu aliquet, aliquam sem. Donec quis aliquam sapien. Aenean ut lorem in justo ultricies tincidunt. Ut lacus massa, pretium sed libero sit amet, ultrices dapibus augue. Aenean sit amet nisi arcu. Sed pharetra facilisis porttitor. Aenean vehicula odio quis aliquet sodales. Sed suscipit scelerisque condimentum. Proin lectus felis, suscipit vel urna convallis, accumsan fringilla massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut quam eget neque blandit fringilla. Donec eu ligula et libero rutrum elementum.
+              Mauris et sapien euismod, blandit arcu aliquet, aliquam sem. Donec quis aliquam sapien. Aenean ut lorem in
+              justo ultricies tincidunt. Ut lacus massa, pretium sed libero sit amet, ultrices dapibus augue. Aenean sit
+              amet nisi arcu. Sed pharetra facilisis porttitor. Aenean vehicula odio quis aliquet sodales. Sed suscipit
+              scelerisque condimentum. Proin lectus felis, suscipit vel urna convallis, accumsan fringilla massa. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut quam eget
+              neque blandit fringilla. Donec eu ligula et libero rutrum elementum.
             </p>
           </div>
         </div>
@@ -24,8 +29,10 @@
         </mat-card-content>
         <mat-card-actions>
           <button mat-raised-button color="primary">LIKE</button>
-          <button mat-raised-button color="accent">EDIT</button>
-          <button mat-raised-button style="background-color: #ffcf44;">DELETE</button>
+          <button mat-raised-button color="accent" [routerLink]="['/user-contact-list/contact', userData.id,'edit']">
+            EDIT
+          </button>
+          <button mat-raised-button color="warn">DELETE</button>
         </mat-card-actions>
       </mat-card>
     </mat-tab>

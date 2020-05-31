@@ -20,4 +20,16 @@ export class AppPaths {
     PATH: 'contact/:id',
     ROUTE: '/contact'
   };
+  static readonly CONTACTEDIT: AppPath = {
+    NAME: 'ContactEdit',
+    PATH: 'contact/:id/edit',
+    ROUTE: '/contactedit'
+  };
+
+
+  static readonly MY_DATA: AppPath = {
+    NAME: 'My Data',
+    PATH: 'my-data',
+    ROUTE: '/my-data'
+  };
 }

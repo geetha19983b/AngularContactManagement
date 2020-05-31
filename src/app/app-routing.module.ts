@@ -28,6 +28,14 @@ const APP_ROUTES: Routes = [
     }
   },
   {
+    path: AppPaths.MY_DATA.PATH,
+    loadChildren: () => import('./modules/user/my-data/my-data.module')
+      .then(m => m.MyDataModule),
+    data: {
+      moduleName: AppPaths.MY_DATA.NAME
+    }
+  },
+  {
     path: '**',
     component: PageNotFoundComponent
   }

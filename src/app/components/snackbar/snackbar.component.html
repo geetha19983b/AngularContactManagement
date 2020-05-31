@@ -1,0 +1,28 @@
+<div [ngClass]="contentClasses">
+  <div class="snack-bar-message-container">
+    <div class="snack-bar-checkmark" *ngIf="params.iconName">
+      <!-- <ual-orion-icon icon="{{params.iconName}}"></ual-orion-icon> -->
+     
+     
+    </div>
+
+    <div *ngIf="params.title" [ngClass]="params.title ? 'snack-bar-title' : ''">
+      {{ params.title }}
+    </div>
+
+    <div *ngIf="params.message && !params.title" [ngClass]="params.message && !params.title ? 'snack-bar-message' : ''">
+      {{ params.message }}
+    </div>
+
+    <div *ngIf="params.message && params.title"
+      [ngClass]="params.message && params.title ? 'snack-bar-message-with-title' : ''">
+      {{ params.message }}
+    </div>
+
+    <div *ngIf="params.actionName" class="snack-bar-action selectable" (click)="actionCallback()">
+      {{ params.actionName }}
+    </div>
+  </div>
+  <mat-icon  (click)="dismiss()">close</mat-icon>
+  <!-- <ual-orion-icon icon="close" (click)="dismiss()"></ual-orion-icon> -->
+</div>

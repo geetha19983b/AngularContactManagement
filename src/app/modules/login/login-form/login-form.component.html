@@ -1,5 +1,5 @@
 <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
-  <div class="full-line spacing-bottom">
+  <div class="form-container">
     <div class="ual-mat-form-field spacing">
       <mat-form-field appearance="fill">
         <mat-label>User Id #</mat-label>
@@ -12,7 +12,7 @@
 
         <button type="button" mat-button matSuffix mat-icon-button *ngIf="loginForm.controls.userId.value"
           aria-label="Clear" (click)="clearValue(loginForm.controls.userId)">
-          <ual-orion-icon icon="close"></ual-orion-icon>
+          <!-- <ual-orion-icon icon="close"></ual-orion-icon> -->
         </button>
       </mat-form-field>
     </div>
@@ -29,7 +29,7 @@
 
         <button type="button" mat-button matSuffix mat-icon-button *ngIf="loginForm.controls.password.value"
           aria-label="Clear" (click)="clearValue(loginForm.controls.password)">
-          <ual-orion-icon icon="close"></ual-orion-icon>
+          <!-- <ual-orion-icon icon="close"></ual-orion-icon> -->
         </button>
       </mat-form-field>
     </div>

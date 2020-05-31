@@ -21,3 +21,40 @@ body {
 //   flex: 1 0 auto;
 // }
 
+.snackbar {
+  max-width: 90% !important;
+  margin-left: auto !important; // center align from left
+  margin-right: auto !important; // center align from right
+  margin-bottom: 1rem !important; 
+  padding: 10px !important; // spacing between the text and boundary
+  background-color: #D81B60;
+  color: #f7f0cf;
+
+  .mat-button-wrapper {
+      color:white !important; // action text color
+  }
+}
+::ng-deep .mat-simple-snackbar {
+  max-width: 100% !important;
+}
+// .snack-bar-full-width {
+//   background-color: #D81B60;
+//   color: #f7f0cf;
+//   min-width: 100% !important;
+//   max-width: 100% !important;
+//   margin-left: auto !important; // center align from left
+//   margin-right: auto !important; // center align from right
+//   margin-bottom: 1rem !important; 
+// }
+.mat-snack-bar-container {
+  padding: 0 !important;
+}
+
+.snack-bar-full-width {
+  position: absolute;
+
+  min-width: 100% !important;
+  max-width: 100% !important;
+  margin-top: 40px !important;
+  margin-left: 0 !important;
+}

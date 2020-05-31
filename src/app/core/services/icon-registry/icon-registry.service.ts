@@ -20,6 +20,7 @@ export class IconRegistryService {
    * If not registered, then register it.
    */
   checkRegisteredIcons(icon: string) {
+    debugger;
     this.matIconRegistry.getNamedSvgIcon(icon)
       .pipe(
         take(1),

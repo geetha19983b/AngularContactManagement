@@ -1,0 +1,57 @@
+:host {
+  display: flex;
+  width: 100%;
+  .fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+  .full-width-input {
+    width: 50%;
+  }
+  .user-form-container {
+    width: 70vw;
+    height: 70vh;
+    margin-top: 0.2rem;
+    background-color: #535463;
+    color: white;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .controls-container {
+    //width: 100%;
+    padding: 1%;
+  }
+  .controls-container > * {
+    //width: 100%;
+    width: 50%;
+  }
+  mat-label,
+  mat-toolbar {
+    color: white;
+    // font-size: 20px;
+  }
+
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    right: 4px;
+  }
+
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #f5f6ff;
+  }
+  textarea.mat-input-element {
+    height: 100px;
+  }
+  .button-row button {
+    margin: 5px;
+  }
+  .mat-raised-button[disabled] {
+    background-color: whitesmoke;
+    color: rgba(0, 0, 0, 0.87);
+  }
+  ::ng-deep .mat-icon-button {
+    background-color: yellowgreen;
+  }
+}
